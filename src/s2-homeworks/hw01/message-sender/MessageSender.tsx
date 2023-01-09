@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useState} from 'react'
-import { message0 } from '../HW1'
+import { Message0 } from '../HW1'
 import s from './MessageSender.module.css'
 
 // компонента, которая тестирует вашу компоненту (не изменять, any не трогать)
@@ -25,7 +25,7 @@ const MessageSender = (props: any) => {
             ...messages,
             {
                 id: messages.length ? messages.length + 1 : 1,
-                user: message0.user,
+                user: Message0.user,
                 message: {
                     text,
                     time: new Date().toTimeString().slice(0, 5),
