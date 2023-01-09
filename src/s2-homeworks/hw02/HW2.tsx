@@ -14,7 +14,7 @@ import s2 from '../../s1-main/App.module.css'
 * 9 - в файле Affair.tsx дописать типизацию пропсов
 * 10 - в файле Affair.tsx дописать функции deleteCallback и использовать
 * 11 - в файле Affair.tsx отобразить приходящие данные
-* */
+* */ fkjf
 
 // types
 export type AffairPriorityType = any // need to fix any
