@@ -25,7 +25,6 @@ export type MessageType = {
         time: string
     }
 }
-
 // структуру объекта не менять
 export let Message0: MessageType= {
     id: 0,
@@ -58,6 +57,7 @@ const HW1 = () => {
                 {/*проверка отображения (не менять)*/}
                 <div>
                     <Message message={Message0} />
+
                     <FriendMessage message={FriendMessage0} />
                 </div>
 
