@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/github.io/DzAvto/static/css/main.fc6cdfaf.css",
-    "main.js": "/github.io/DzAvto/static/js/main.2700a3dc.js",
-    "static/js/787.6e9cde8e.chunk.js": "/github.io/DzAvto/static/js/787.6e9cde8e.chunk.js",
-    "index.html": "/github.io/DzAvto/index.html",
-    "main.fc6cdfaf.css.map": "/github.io/DzAvto/static/css/main.fc6cdfaf.css.map",
-    "main.2700a3dc.js.map": "/github.io/DzAvto/static/js/main.2700a3dc.js.map",
-    "787.6e9cde8e.chunk.js.map": "/github.io/DzAvto/static/js/787.6e9cde8e.chunk.js.map"
+    "main.css": "/DzAvto/static/css/main.fc6cdfaf.css",
+    "main.js": "/DzAvto/static/js/main.d9a8fedb.js",
+    "static/js/787.6e9cde8e.chunk.js": "/DzAvto/static/js/787.6e9cde8e.chunk.js",
+    "index.html": "/DzAvto/index.html",
+    "main.fc6cdfaf.css.map": "/DzAvto/static/css/main.fc6cdfaf.css.map",
+    "main.d9a8fedb.js.map": "/DzAvto/static/js/main.d9a8fedb.js.map",
+    "787.6e9cde8e.chunk.js.map": "/DzAvto/static/js/787.6e9cde8e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fc6cdfaf.css",
-    "static/js/main.2700a3dc.js"
+    "static/js/main.d9a8fedb.js"
   ]
 }
