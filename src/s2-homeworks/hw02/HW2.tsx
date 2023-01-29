@@ -28,7 +28,7 @@ export type AffairType = {
 export type FilterType = 'all' | AffairPriorityType
 
 // constants
-const defaultAffairs: AffairType[]=[
+const defaultAffairs: AffairType[] = [
     {_id: 1, name: 'React', priority: 'high'},
     {_id: 2, name: 'anime', priority: 'low'},
     {_id: 3, name: 'games', priority: 'low'},
@@ -37,13 +37,22 @@ const defaultAffairs: AffairType[]=[
 ]
 
 
-export const filterAffairs = (affairs: AffairType, filter: FilterType): any => {
-
-
-    return affairs // need to fix
+export const filterAffairs = (affairs: AffairType[], filter: FilterType): AffairType[] => {
+    if (filter === 'high') {
+        return affairs.filter((affair) => affair.priority === 'high');
+    }
+    if (filter === 'low') {
+        return affairs.filter((affair) => affair.priority === 'low');
+    }
+    if (filter==='middle') {
+        return affairs.filter((affair) => affair.priority === 'middle');
+    }
+    else {
+        return affairs;
+    }
 }
-export const deleteAffair = (affairs: AffairType, _id: number): AffairType => {
-
+export const deleteAffair = (affairs: AffairType[], _id: number): AffairType[] => {
+return affairs.filter((affair) => affair._id !== _id)
 }
 
 function HW2() {
@@ -52,7 +61,7 @@ function HW2() {
 
     const filteredAffairs = filterAffairs(affairs, filter)
     const deleteAffairCallback = (_id: number) => {
-        setAffairs(affairs=affairs.filter(el=>el._id!==_id))
+        setAffairs(deleteAffair(affairs, _id))
     }
 
     return (
