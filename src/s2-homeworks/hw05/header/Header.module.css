@@ -1,8 +1,23 @@
 .burgerMenuIcon {
+    transform: translate(200px);
+
 }
 
 .header {
+    display: flex;
+
+    width: 280px;
+    transition-duration: 500ms;
+
+
 }
+/*
+.header:hover {
+    transition-duration: 500ms;
+    transform: translate(0px);
+}
+*/
 
 .header h1 {
+
 }

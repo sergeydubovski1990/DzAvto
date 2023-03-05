@@ -2,33 +2,23 @@ import React, {ChangeEvent, KeyboardEvent, useState} from 'react'
 import Greeting from './Greeting'
 import {UserType} from './HW3'
 import user from "../hw08/User";
-import {futimes} from "fs";
 
 type GreetingContainerPropsType = {
     users: UserType[]
     addUserCallback: (name: string) => void
 }
 
-export const pureAddUser = (name: string, setError: any, setName: string, addUserCallback: string) => name.length === 0 ? setError : setName
-// если имя пустое - показать ошибку, иначе - добавить юзера и очистить инпут}
+export const pureAddUser = (name: string, setError: any, setName: any, addUserCallback: (name: string) => void) => name.length === 0 ? setError : setName;
 
-export const pureOnBlur = (name: string, setError: string) => { // если имя пустое - показать ошибку
+
+export const pureOnBlur = (name: string, setError: (value: (((prevState: string) => string) | string)) => void) => name.length === 0 ? setError: '';
+export const pureOnEnter = (e: KeyboardEvent<HTMLInputElement>, addUser: any) => {
+    e.key === "Enter" && addUser()
 }
-
-export const pureOnEnter = (e: KeyboardEvent<HTMLInputElement>, addUser: any) => { e.key === "Enter" && addUser()
-
-    // если нажата кнопка Enter - добавить
-}
-
-// более простой и понятный для новичков
-// function GreetingContainer(props: GreetingPropsType) {
-
-// более современный и удобный для про :)
 const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
                                                                      users,
                                                                      addUserCallback
                                                                  }) => {
-    // деструктуризация пропсов
     const [name, setName] = useState<string>('')
     const [error, setError] = useState<string>('')
 
@@ -60,8 +50,8 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
         }
     }
 
-    const totalUsers = user.length // need to fix
-    const lastUserName = name// need to fix
+    const totalUsers = user.length
+    const lastUserName = name
 
     return (
         <Greeting
@@ -77,4 +67,4 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     )
 }
 
-export default GreetingContainer
+export default GreetingContainer;

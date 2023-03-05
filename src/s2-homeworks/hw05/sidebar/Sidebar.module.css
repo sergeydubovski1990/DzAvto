@@ -1,25 +1,49 @@
 .sidebar {
+    grid-area: n;
+    background-color: gold;
+    padding: 20px;
 }
 
+
 .sidebar.open {
+    margin: 0 auto;
+    display: grid;
+    width: 1200px;
+    grid-template-areas:
+  "h h"
+  "n c";
+
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 2fr 10fr;
+
+
 }
 
 .background {
 }
 
 .nav {
+
 }
 
 .nav a {
+    text-decoration: none;
+    color: #7af;
+    margin: 15px;
 }
 
 .nav a:hover {
+    color: hotpink;
 }
 
 .nav a.active {
+    color: #4c6c06;
 }
 .close {
+    color: black;
+
 }
 
 .close img {
+
 }
