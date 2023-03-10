@@ -7,7 +7,7 @@ type GreetingPropsType = {
     addUser: () => void // need to fix any
     onBlur: () => void // need to fix any
     onEnter: (e: KeyboardEvent<HTMLInputElement>) => void// need to fix any
-    error: any // need to fix any
+    error: string // need to fix any
     totalUsers: number // need to fix any
     lastUserName?: string // need to fix any
 }
@@ -42,7 +42,7 @@ const Greeting: React.FC<GreetingPropsType> = (
                         id={'hw3-input'}
                         value={name}
                         onChange={setNameCallback}
-                        className={inputClass}
+                        className={`${inputClass} ${s.input}`}
                         onKeyDown={onEnter}
                         onBlur={onBlur}
                     />
