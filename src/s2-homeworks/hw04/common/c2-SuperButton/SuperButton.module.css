@@ -1,64 +1,56 @@
 .button {
-    overflow: hidden;
-    padding: 5px 24px;
-
-    border-radius: 12px;
-    border: none;
-
-    color: #d79ab4;
-    font-family: 'Montserrat', sans-serif;
+    width: 132px;
+    height: 30px;
+    border-radius: 3px;
     font-weight: 600;
-    font-size: 14px;
-    line-height: 20px;
+    line-height: 143%;
+    color: #ffffff;
     cursor: pointer;
+    transition: all .3s ease;
+}
+
+
+.button:active:before {
+    right: 0;
 }
 
 .disabled {
-    color: #002e5c;
-    background: #f5f50a;
+    background: #004D99;
     opacity: 0.5;
+    color: #ffffff;
 }
 
 .secondary {
     color: #0066CC;
-    background: transparent;
     border: 1px solid #0066CC;
-    border-radius: 3px;
+    background-color: transparent;
 }
 
 .default {
-    background: #06c;
+    background: #0066CC;
 }
 
 .red {
-    background: #cc1439;
+    background: #CC1439;
 }
 
 .default:hover {
-    background: #08253e;
+    background-color: transparent;
+    color: #0066CC;
+    border: 1px solid #0066CC;
 }
 
 .red:hover {
-    background: #48020f;
+    background-color: transparent;
+    color: #CC1439;
+    border: 1px solid #CC1439;
 }
 
 .secondary:hover {
-    background: #F5F0EA;
-}
-
-
-.default:active {
-    background: #0059b3;
-}
-
-.secondary:active {
-    background: #C9E5FF;
-}
-
-.red:active {
-    background: #b31232;
+    background: #0066CC;
+    color: #ffffff;
 }
 
 .button:disabled {
-    cursor: default;
+    cursor: no-drop;
 }

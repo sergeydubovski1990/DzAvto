@@ -17,7 +17,17 @@ const SuperButton: React.FC<SuperButtonPropsType> = (
         ...restProps // все остальные пропсы попадут в объект restProps, там же будет children
     }
 ) => {
-    const finalClassName = `${s.button} ${xType==='red' ? s.red : xType==='secondary' ? s.secondary : s.default}`
+    const finalClassName = `${s.button} ${disabled ? s.disabled : '' } ${xType === 'red' ? s.red : xType=== 'secondary'? s.secondary:s.default}`
+
+//ИЛИ ЕСЛИ НЕ ПОНЯТНО С finalClassName  ТОЖЕ САМОЕ ПРИ ПОМОЩИ ШАБЛОННЫХ СТРОК:
+    // `${s.СТИЛЬ КНОПКИ}
+    //
+    //
+    // ${xType==='КРАСНЫЙ' ? ДАВАЙ КРАСНЫЙ СТИЛЬ : xType === 'secondary' ? ДАВАЙ СЕКОНДАРИ СТИЛЬ: ДАВАЙ ПО ДЕФОЛТУ }
+    //
+    //
+    // ${disabled ? s.button:disabled  :  ПУСТУЮ СТРОКУ} `
+    // ЭТУ АЛХИМИЯ БУДЕМ ПОДРОБНО РАЗБИРАТЬ НА ДОПАХ
 
 
  return (
@@ -29,4 +39,4 @@ const SuperButton: React.FC<SuperButtonPropsType> = (
     )
 }
 
-export default SuperButton
+export default SuperButton;

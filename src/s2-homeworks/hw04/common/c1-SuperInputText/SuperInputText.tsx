@@ -47,10 +47,15 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
         e.key === 'Enter' && // и если нажата кнопка Enter
         onEnter() // то вызвать его
     }
+    /*   const finalInputClassmeNa = s.input
+            + (error ? ' ' + s.errorInput : ' ' + s.superInput)
+            + (className ? ' ' + s.className : '')*/
+    /*const finalSpanClassName = `${s.error} ${spanClassName} ? '' ${spanClassName} : ''`*/
+    /*const finalInputClassName = `${s.input} ${s.error} ? '' ${s.errorInput} : '' ${s.superInput} ${className} ? '' ${s.className} : ''`*/
 
-    const finalSpanClassName = `${s.error} ${spanClassName} ? '' ${spanClassName} : ''`
+    const finalSpanClassName = `${s.error} ${spanClassName ? ' ' + spanClassName : ''}`
+    const finalInputClassName = `${s.input} ${error ? ' ' + s.errorInput : ' ' + s.superInput} ${className ? ' ' + s.className : ''}`
 
-    const finalInputClassName = `${s.input} ${s.error} ? '' ${s.errorInput} : '' ${s.superInput} ${className} ? '' ${s.className} : ''`
 
     return (
         <div className={s.inputWrapper}>
@@ -72,4 +77,10 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
     )
 }
 
-export default SuperInputText
+export default SuperInputText;
+/*
+get disabled button element. Button should be disabled. Button class should contain 'button', 'disabled' and should not contain 'undefined' value
+
+get second input element, press 'enter' on empty input. Input class should contain 'input', 'errorInput' and should not contain а 'undefined' value
+
+get second input element. Input element class should contain 'input', 'superInput' and should not contain 'undefined' value*/
